@@ -1,3 +1,4 @@
+from msilib import text
 import PySimpleGUI as sg
 import math as M
 
@@ -13,21 +14,58 @@ result = float(0.0)
 
 layout = [
     [
-        sg.Radio("", "Radio", True, enable_events=True, key="want"),
-        sg.Text("Impedância capacitiva"),
-        sg.Radio("", "Radio", False, enable_events=True, key="want"),
-        sg.Text("Impedância indutiva"),
+        sg.Radio(
+            "",
+            "Radio",
+            True,
+            enable_events=True,
+            key="want",
+            circle_color="grey",
+            text_color="white",
+        ),
+        sg.Text(
+            "Impedância capacitiva",
+            size=(16, 1),
+            background_color="Grey",
+            text_color="pink",
+        ),
+        sg.Radio(
+            "",
+            "Radio",
+            False,
+            enable_events=True,
+            key="want",
+            circle_color="grey",
+            text_color="white",
+        ),
+        sg.Text(
+            "Impedância indutiva",
+            size=(16, 1),
+            background_color="Grey",
+            text_color="pink",
+        ),
     ],
-    [sg.Text(size=(25, 1), key="out")],
+    [sg.Text(size=(23, 1), key="out", text_color="white", background_color="orange")],
     [sg.Text("Digite o valor em µFarads", key="Rjr")],
-    [sg.Input(size=(25, 5), key="input")],
-    [sg.Text("Digite a frequência em Hz", key="Njr"), sg.Text("", key="out2")],
+    [sg.Input(size=(25, 5), key="input", text_color="yellow")],
     [
-        sg.Input(size=(25, 5), key="input2"),
-        sg.Text("Volts"),
-        sg.Input(size=(10, 5), key="input3"),
+        sg.Text("Digite a frequência em Hz", key="Njr"),
+        sg.Text("              "),
+        sg.Text(
+            "", size=(9, 1), key="out2", background_color="orange", text_color="white"
+        ),
     ],
-    [sg.Button("Calcular", expand_x=True, bind_return_key=True), sg.Button("Exit")],
+    [
+        sg.Input(size=(25, 5), key="input2", text_color="yellow"),
+        sg.Text("Volts"),
+        sg.Input(size=(10, 5), key="input3", text_color="yellow"),
+    ],
+    [
+        sg.Button(
+            "Calcular", expand_x=True, bind_return_key=True, button_color="orange"
+        ),
+        sg.Button("Exit"),
+    ],
 ]
 
 
