@@ -1,4 +1,3 @@
-from msilib import text
 import PySimpleGUI as sg
 import math as M
 
@@ -23,12 +22,7 @@ layout = [
             circle_color="grey",
             text_color="white",
         ),
-        sg.Text(
-            "Impedância capacitiva",
-            size=(16, 1),
-            background_color="Grey",
-            text_color="pink",
-        ),
+        sg.Text("Impedância capacitiva", size=(16, 1), text_color="pink"),
         sg.Radio(
             "",
             "Radio",
@@ -38,12 +32,7 @@ layout = [
             circle_color="grey",
             text_color="white",
         ),
-        sg.Text(
-            "Impedância indutiva",
-            size=(16, 1),
-            background_color="Grey",
-            text_color="pink",
-        ),
+        sg.Text("Impedância indutiva", size=(16, 1), text_color="pink"),
     ],
     [sg.Text(size=(23, 1), key="out", text_color="white", background_color="orange")],
     [sg.Text("Digite o valor em µFarads", key="Rjr")],
