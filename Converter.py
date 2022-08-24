@@ -17,7 +17,13 @@ layout = [
     ],
     [
         sg.Input(size=(25, 5), key="input"),
-        sg.Text("Padrão", size = (5,1), key="slct", text_color="Yellow", background_color="Blue"),
+        sg.Text(
+            "Padrão",
+            size=(5, 1),
+            key="slct",
+            text_color="Yellow",
+            background_color="Blue",
+        ),
     ],
     [
         sg.Text("Padrão"),
@@ -35,7 +41,13 @@ layout = [
             text_color="Yellow",
             background_color="Grey",
         ),
-        sg.Text("Padrão", size = (5,1), key="slct2", text_color="Yellow", background_color="Blue"),
+        sg.Text(
+            "Padrão",
+            size=(5, 1),
+            key="slct2",
+            text_color="Yellow",
+            background_color="Blue",
+        ),
     ],
     [
         sg.Button(
@@ -71,59 +83,77 @@ while True:
                 window["out"].update(values["input"])
 
             if values["m2"]:
-                result = values["input"]
-                result = result.replace(",", ".")
-                result = float(result)
-                result = round(result * 1000, 4)
-                result = str(result)
-                window["out"].update(result + " m")
+                try:
+                    result = values["input"]
+                    result = result.replace(",", ".")
+                    result = float(result)
+                    result = round(result * 1000, 4)
+                    result = str(result)
+                    window["out"].update(result + " m")
+                except:
+                    window["out"].update("")
 
             if values["µ2"]:
-                result = values["input"]
-                result = result.replace(",", ".")
-                result = float(result)
-                result = round(result * 1000000, 4)
-                result = str(result)
-                window["out"].update(result + " µ")
+                try:
+                    result = values["input"]
+                    result = result.replace(",", ".")
+                    result = float(result)
+                    result = round(result * 1000000, 4)
+                    result = str(result)
+                    window["out"].update(result + " µ")
+                except:
+                    window["out"].update("")
 
         if values["m1"]:
 
             if values["p2"]:
-                result = values["input"]
-                result = result.replace(",", ".")
-                result = float(result)
-                result = round(result / 1000, 4)
-                result = str(result)
-                window["out"].update(result)
+                try:
+                    result = values["input"]
+                    result = result.replace(",", ".")
+                    result = float(result)
+                    result = round(result / 1000, 4)
+                    result = str(result)
+                    window["out"].update(result)
+                except:
+                    window["out"].update("")
 
             if values["m2"]:
                 window["out"].update(values["input"] + " m")
 
             if values["µ2"]:
-                result = values["input"]
-                result = result.replace(",", ".")
-                result = float(result)
-                result = round(result * 1000, 4)
-                result = str(result)
-                window["out"].update(result + " µ")
+                try:
+                    result = values["input"]
+                    result = result.replace(",", ".")
+                    result = float(result)
+                    result = round(result * 1000, 4)
+                    result = str(result)
+                    window["out"].update(result + " µ")
+                except:
+                    window["out"].update("")
 
         if values["µ1"]:
 
             if values["p2"]:
-                result = values["input"]
-                result = result.replace(",", ".")
-                result = float(result)
-                result = result / 1000000
-                result = str(result)
-                window["out"].update(result)
+                try:
+                    result = values["input"]
+                    result = result.replace(",", ".")
+                    result = float(result)
+                    result = result / 1000000
+                    result = str(result)
+                    window["out"].update(result)
+                except:
+                    window["out"].update("")
 
             if values["m2"]:
-                result = values["input"]
-                result = result.replace(",", ".")
-                result = float(result)
-                result = round(result / 1000, 4)
-                result = str(result)
-                window["out"].update(result + " m")
+                try:
+                    result = values["input"]
+                    result = result.replace(",", ".")
+                    result = float(result)
+                    result = round(result / 1000, 4)
+                    result = str(result)
+                    window["out"].update(result + " m")
+                except:
+                    window["out"].update("")
 
             if values["µ2"]:
                 window["out"].update(values["input"] + " µ")
