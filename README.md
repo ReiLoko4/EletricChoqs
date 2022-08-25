@@ -5,7 +5,7 @@ Progamas feitos por um garoto de progama com intuito de facilitar cálculos com 
 
 # Language
 
-*Python3*
+**Python3**
 
 # Requirements
 
