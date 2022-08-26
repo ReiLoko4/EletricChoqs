@@ -6,6 +6,7 @@ Progamas feitos por um garoto de progama com intuito de facilitar cálculos com 
 # Exe format
 
 The Exe format was made so there is no need to install modules or python itself, but there are some complications with signing that I intend to solve... one day!
+
 O formato Exe foi feito para não haver a necessidade de instalação dos módulos nem do próprio python, pórem tem algumas complicações com assinatura que pretendo resolver... um dia!
 
 # Language
