@@ -12,7 +12,7 @@ language = [
     "Made in Python with the PySimpleGUI library.",
     "Version ",
     "Calculate",
-    "Exit",
+    "Exit"
 ]
 
 sg.theme("DarkBlue")
@@ -93,7 +93,7 @@ while True:
                 "Made in Python with the PySimpleGUI library.",
                 "Version ",
                 "Calculate",
-                "Exit",
+                "Exit"
             ]
             update()
         else:
@@ -108,7 +108,7 @@ while True:
                 "Feito em Python com a biblioteca PySimpleGUI.",
                 "Versão ",
                 "Calcular",
-                "Sair",
+                "Sair"
             ]
             update()
     if event == "?":
